@@ -1,4 +1,4 @@
-package com.prueba.Gestion_Usuarios
+package com.prueba.`User-Management-BD`
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest

@@ -1,4 +1,4 @@
-package com.prueba.Gestion_Usuarios.types
+package com.prueba.`User-Management-BD`.types
 
 enum class UserStatus {
     ACTIVE,

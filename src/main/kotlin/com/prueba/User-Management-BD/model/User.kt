@@ -1,7 +1,6 @@
 package com.prueba.Gestion_Usuario.modelo
 
-import com.prueba.Gestion_Usuarios.model.Role
-import com.prueba.Gestion_Usuarios.types.UserStatus
+import com.prueba.`User-Management-BD`.types.UserStatus
 import java.sql.Date
 
 data class User(

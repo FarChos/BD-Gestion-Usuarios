@@ -1,4 +1,4 @@
-package com.prueba.Gestion_Usuarios
+package com.prueba.`User-Management-BD`
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

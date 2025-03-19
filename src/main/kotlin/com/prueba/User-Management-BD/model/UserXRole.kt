@@ -1,4 +1,4 @@
-package com.prueba.Gestion_Usuarios.model
+package com.prueba.`User-Management-BD`.model
 
 data class UserXRole(
     val userId: Long,

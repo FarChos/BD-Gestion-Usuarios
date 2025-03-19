@@ -1,1 +1,1 @@
-rootProject.name = "Gestion-Usuarios"
+rootProject.name = "User-Management-BD"
