@@ -1,0 +1,76 @@
+databaseChangeLog:
+  - changeSet:
+      id: '1'
+      author: frey
+      changes:
+        - createTable:
+            tableName: book
+            columns:
+              - column:
+                  name: id_book
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+
+        - createTable:
+            tableName: user
+            columns:
+              - column:
+                  name: id_user
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+
+        - createTable:
+            tableName: loan
+            columns:
+              - column:
+                  name: id_loan
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: book_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: loan_date
+                  type: date
+                  constraints:
+                    nullable: false
+
+        - addForeignKeyConstraint:
+            baseTableName: loan
+            baseColumnNames: book_id
+            referencedTableName: book
+            referencedColumnNames: id_book
+            constraintName: fk_loan_book
+
+        - addForeignKeyConstraint:
+            baseTableName: loan
+            baseColumnNames: user_id
+            referencedTableName: user
+            referencedColumnNames: id_user
+            constraintName: fk_loan_user
